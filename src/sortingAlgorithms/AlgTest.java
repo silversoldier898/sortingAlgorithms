@@ -65,23 +65,21 @@ class AlgTest {
 	
 	@Test
 	void testBinarySearch() {
-		Alg.mergeSort(one);
-		Alg.mergeSort(small);
-		Alg.mergeSort(medium);
-		assertEquals(0, Alg.binarySearch(one, 5));
-		assertEquals(-1, Alg.binarySearch(one, 55));
-		
-		assertEquals(2, Alg.binarySearch(small, 10));
-		assertEquals(-1, Alg.binarySearch(small, 100000));
-		
-		assertEquals(8, Alg.binarySearch(medium, 100));
-		assertEquals(7, Alg.binarySearch(medium, 25));
-		assertEquals(6, Alg.binarySearch(medium, 21));
-		assertEquals(5, Alg.binarySearch(medium, 10));
 
-		assertEquals(1, Alg.binarySearch(medium, -3));
-		assertEquals(0, Alg.binarySearch(medium, -455));
-		assertEquals(-1, Alg.binarySearch(medium, -44455));
+		assertEquals(0, Alg.binarySearch(oneSorted, 5));
+		assertEquals(-1, Alg.binarySearch(oneSorted, 55));
+		
+		assertEquals(2, Alg.binarySearch(smallSorted, 10));
+		assertEquals(-1, Alg.binarySearch(smallSorted, 100000));
+		
+		assertEquals(8, Alg.binarySearch(mediumSorted, 100));
+		assertEquals(7, Alg.binarySearch(mediumSorted, 25));
+		assertEquals(6, Alg.binarySearch(mediumSorted, 21));
+		assertEquals(5, Alg.binarySearch(mediumSorted, 10));
+
+		assertEquals(1, Alg.binarySearch(mediumSorted, -3));
+		assertEquals(0, Alg.binarySearch(mediumSorted, -455));
+		assertEquals(-1, Alg.binarySearch(mediumSorted, -44455));
 		
 		
 	}
